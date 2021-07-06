@@ -1,0 +1,17 @@
+<%- include("partial/header"); -%>
+      <h1>home</h1>
+      <p>
+            <%=firstparagraph%>
+      </p>
+      <% for(i=0;i<arr.length;i++){ %>
+            <h1>
+                  <%= arr[i].postTitle %>
+            </h1>
+            <p>
+                  <%= arr[i].postbody.substring(0,100)+"...." %>
+                        <a href="/posts/<%= arr[i].postTitle%>">Read More</a>
+            </p>
+
+            <% }%>
+
+                  <%- include("partial/footer"); -%>
